@@ -1,109 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autogrowth - Catálogo</title>
-
-  <style>
-    /* Estilos gerais */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #10f0b8;
-      margin: 0;
-      padding: 20px;
-    }
-
-    /* Título principal */
-    h1 {
-      text-align: center;
-      color: #860505;
-    }
-
-    /* Texto de introdução */
-    .intro {
-      text-align: center;
-      max-width: 600px;
-      margin: 10px auto 30px;
-      font-size: 16px;
-      color: #29854f;
-    }
-
-    /* Container dos produtos */
-    .catalogo {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    /* Cada card de produto */
-    .card {
-      background-color: rgb(27, 235, 8);
-      border: 1px solid #1a4c75;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 220px;
-      padding: 15px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-
-    /* Efeito ao passar o mouse */
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    /* Imagem do produto */
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-
-    /* Nome do produto */
-    .card h2 {
-      font-size: 18px;
-      color: #daf10a;
-      margin: 10px 0;
-    }
-
-    /* Preço em destaque */
-    .preco {
-      color: #e60000;
-      font-weight: bold;
-      font-size: 16px;
-      margin-top: 10px;
-    }
-  </style>
+    <title>Alterar Estilo do Parágrafo</title>
 </head>
-
 <body>
 
-  <h1>Autogrowth</h1>
-  <p class="intro">
-    e man, seja bem vindo a lojinha de suplementos do Lcarlos.
-  </p>
+    <!-- Parágrafo que será estilizado -->
+    <p id="meuParagrafo">Não tem nada.</p>
 
-  <div class="catalogo">
-    <div class="card">
-      <img src="/home/escola/Imagens/gugs.jpg" alt="Whey chocolate">
-      <h2>Whey Chocolate</h2>
-      <p class="preco">R$ 129,90</p>
-    </div>
+    <!-- Botão que chama a função para mudar o estilo -->
+    <button onclick="mudarEstilo()">não clique</button>
 
-    <div class="card">
-      <img src="/home/escola/Imagens/z da manga.jpg" alt="Whey baunilha">
-      <h2>Whey Baunilha</h2>
-      <p class="preco">R$ 129,90</p>
-    </div>
+    <script>
+        // Função que altera o estilo do parágrafo
+        function mudarEstilo() {
+            // Pegando o parágrafo pelo ID
+            var paragrafo = document.getElementById("meuParagrafo");
 
-    <div class="card">
-      <img src="/home/escola/Imagens/5217208 (1).webp" alt="Whey cookies and cream">
-      <h2>Whey Cookies n' Cream</h2>
-      <p class="preco">R$ 129,90</p>
-    </div>
-  </div>
+            // Mudando o estilo do parágrafo
+            paragrafo.style.color = "blue";             // Muda a cor do texto
+            paragrafo.style.fontSize = "24px";          // Muda o tamanho da fonte
+            paragrafo.style.fontWeight = "bold";        // Deixa o texto em negrito
+            paragrafo.style.fontFamily = "Arial";       // Muda a fonte do texto
+        }
+    </script>
 
 </body>
 </html>
