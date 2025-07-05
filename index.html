@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Alterar Estilo do Parágrafo</title>
+    <title>Trocar Imagem</title>
 </head>
 <body>
 
-    <!-- Parágrafo que será estilizado -->
-    <p id="meuParagrafo">Não tem nada.</p>
+    <!-- Imagem que será trocada -->
+    <img id="minhaImagem" src="imagem1.jpg" alt="Imagem" width="300">
 
-    <!-- Botão que chama a função para mudar o estilo -->
-    <button onclick="mudarEstilo()">não clique</button>
+    <br><br>
+
+    <!-- Botão para trocar a imagem -->
+    <button onclick="trocarImagem()">Trocar Imagem</button>
 
     <script>
-        // Função que altera o estilo do parágrafo
-        function mudarEstilo() {
-            // Pegando o parágrafo pelo ID
-            var paragrafo = document.getElementById("meuParagrafo");
+        // Variável para controlar qual imagem está sendo exibida
+        var imagemAtual = 1;
 
-            // Mudando o estilo do parágrafo
-            paragrafo.style.color = "blue";             // Muda a cor do texto
-            paragrafo.style.fontSize = "24px";          // Muda o tamanho da fonte
-            paragrafo.style.fontWeight = "bold";        // Deixa o texto em negrito
-            paragrafo.style.fontFamily = "Arial";       // Muda a fonte do texto
+        // Função que troca a imagem
+        function trocarImagem() {
+            var imagem = document.getElementById("minhaImagem");
+
+            if (imagemAtual === 1) {
+                imagem.src = "https://www.shutterstock.com/editorial/image-editorial/OeT2c522Nej5A049MjA0MQ==/cristiano-ronaldo-real-madrid-his-son-jr-440nw-9694250oo.jpg"; // troca para a segunda imagem
+                imagemAtual = 2;
+            } else {
+                imagem.src = "https://i.pinimg.com/736x/40/4d/a8/404da83ffd2f88f49083e82991d7aeba.jpg"; // volta para a primeira imagem
+                imagemAtual = 1;
+            }
         }
     </script>
 
