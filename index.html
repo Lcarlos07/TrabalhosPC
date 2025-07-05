@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Trocar Imagem</title>
+    <title>Alterar Estilo do Parágrafo</title>
 </head>
 <body>
 
-    <!-- Imagem que será trocada -->
-    <img id="minhaImagem" src="imagem1.jpg" alt="Imagem" width="300">
+    <!-- Parágrafo que será estilizado -->
+    <p id="meuParagrafo">Não tem nada.</p>
 
-    <br><br>
-
-    <!-- Botão para trocar a imagem -->
-    <button onclick="trocarImagem()">Trocar Imagem</button>
+    <!-- Botão que chama a função para mudar o estilo -->
+    <button onclick="mudarEstilo()">não clique</button>
 
     <script>
-        // Variável para controlar qual imagem está sendo exibida
-        var imagemAtual = 1;
+        // Função que altera o estilo do parágrafo
+        function mudarEstilo() {
+            // Pegando o parágrafo pelo ID
+            var paragrafo = document.getElementById("meuParagrafo");
 
-        // Função que troca a imagem
-        function trocarImagem() {
-            var imagem = document.getElementById("minhaImagem");
-
-            if (imagemAtual === 1) {
-                imagem.src = "https://www.shutterstock.com/editorial/image-editorial/OeT2c522Nej5A049MjA0MQ==/cristiano-ronaldo-real-madrid-his-son-jr-440nw-9694250oo.jpg"; // troca para a segunda imagem
-                imagemAtual = 2;
-            } else {
-                imagem.src = "https://i.pinimg.com/736x/40/4d/a8/404da83ffd2f88f49083e82991d7aeba.jpg"; // volta para a primeira imagem
-                imagemAtual = 1;
-            }
+            // Mudando o estilo do parágrafo
+            paragrafo.style.color = "blue";             // Muda a cor do texto
+            paragrafo.style.fontSize = "24px";          // Muda o tamanho da fonte
+            paragrafo.style.fontWeight = "bold";        // Deixa o texto em negrito
+            paragrafo.style.fontFamily = "Arial";       // Muda a fonte do texto
         }
     </script>
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Data e Hora</title>
+</head>
+<body>
+<a href="horarioindex.html">Meu outro site</a>
+<a href="imagensindex.html">Meu 2 outro site</a>
+
